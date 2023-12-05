@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+ 
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Enjoy your searching</h1>
+       <div  class="search-box">
+        <form class="search-form" id="search-form">
+          <input
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+          <button type="submit" class="js-element">
+          <svg class="svg">
+            <use href="images/symbol-defs-min.svg#icon-search"></use>
+          </svg>
+          </button>
+        </form>
+       </div>
+    </header>
+
+      <!-- smoth scroll -->
+      <div class="btn-up">
+        <button class="btn-up-wrapper__btn" id="to-top-btn" title="Go to top">
+          <svg class="icon" width="20" heihgt="20"aria-label="up"><use href="./images/symbol-defs-min.svg#icon-cloud-upload"></use></svg>
+        </button>
+      </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+
+    <!-- load button -->
+    <button type="button" class="load-more">
+      <svg class="svg-download">
+        <use href="./images/symbol-defs-min.svg#icon-cloud-download"></use>
+      </svg>
+    </button>
+
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <!-- <include src="./partials/example.html"></include> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js" type="module"></script>
+
+  </body>
+</html>

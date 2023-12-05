@@ -1,0 +1,255 @@
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+
+  body {
+    font-size: 13px;
+    font-family: 'Arvo', monospace;
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(rgba(223, 148, 230, 0.7), rgba(46, 47, 66, 0.7)), url(../images/windows-11-stock-purple-abstract-purple-background-2732x2732-8968-min.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+/* Header */
+
+
+
+  header {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-direction: column;
+  
+    
+  }
+  
+ .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 42px;
+    text-shadow: 1px 1px 16px rgba(10, 10, 10, 0.57);
+    color: #fafafa
+    ;
+  }
+  
+  header .search-box {
+    position: relative;
+    width: 250px;
+   
+  }
+
+  .search-box input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+  }
+  
+  .search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: purple;
+  }
+  
+  .svg {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 25%;
+    right: 30%;
+    fill: #fafafa;
+   
+  }
+
+  .search-box button:hover,
+  .search-box button:focus{
+    background: yellowgreen;
+  }
+
+  /* Gallery */
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  .photo-card {
+    width: 300px;
+    height: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 0px solid #fff;
+    position: relative;
+    box-shadow: 0px -1px 12px -3px rgba(0, 0, 0, 0.82);
+    transition: box-shadow 450ms ease-in;
+  }
+  
+  .photo-card:hover {
+    box-shadow: 1px 0px 36px -9px rgba(255, 255, 255, 0.82);
+  
+    bottom: 5px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fafafa;
+  }
+  
+  .photo-card:hover .info {
+    opacity: 1;
+    visibility: initial;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .info {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+  
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  
+    position: absolute;
+    background: #871e7038;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #fafafa;
+    padding: 30px;
+  }
+  
+  .info-item {
+    font-size: 16px;
+  }
+  
+  .load-more {
+    
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    margin: auto ;
+    border: solid 1px #fff;
+
+    margin-bottom: .9375rem;
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+   
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    transform: scale(0.9);
+    background: purple;
+  }
+  
+  .svg-download {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    fill: #fafafa;
+    
+  }
+
+  .load-more:hover,
+  .load-more:focus{
+    background: yellowgreen;
+  }
+
+  .icon {
+    display: inline-block;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 20%;
+    right: 18%;
+    fill: #fafafa;
+  }
+
+
+  /* Button smooth scroll up */
+
+  .btn-up {
+      display: none;
+  
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.875rem;
+      z-index: 99;
+      border: none;
+      width: 6.25rem;
+      height: 6.25rem;
+  }
+  
+  .btn-up-text {
+      margin-bottom: .9375rem;
+      font-family: inherit;
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-align: center;
+
+  }
+  
+ .btn-up-wrapper__btn {
+   cursor: pointer;
+   width: 100px;
+   height: 100px;
+   border-radius: 50px;
+   margin: auto ;
+   border: solid 1px #fff;
+  
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   transform: scale(0.9);
+   background: purple;
+ }
+   
+ .btn-up-wrapper__btn:hover,
+ .btn-up-wrapper__btn:focus {
+   background: yellowgreen;
+ }
+
+
+
+
+
