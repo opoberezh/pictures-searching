@@ -1,96 +1,3 @@
-// import SimpleLightbox from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
-// import {
-//   getImages,
-//   setSearchQuery,
-//   resetPage,
-//   nextPage,
-//   updateFirstSearch,
-// } from './get_api';
-// import { createMarkup } from './markup';
-// import { Notify } from 'notiflix';
-// import { Report } from 'notiflix/build/notiflix-report-aio';
-
-// let form = document.querySelector('#search-form');
-// let gallery = document.querySelector('.gallery');
-// let loadMoreBtn = document.querySelector('.load-more');
-// let btnUp = document.getElementById('to-top-btn');
-// let btnUpWrapper = document.querySelector('.btn-up');
-
-// loadMoreBtn.style.display = 'none';
-
-// form.addEventListener('submit', function (evt) {
-//   evt.preventDefault();
-
-//   let searchQuery = evt.target.searchQuery.value.trim();
-//   if (searchQuery === '') {
-//     Notify.warning('Input field is empty or contains only spaces');
-//     return;
-//   }
-
-//   setSearchQuery(searchQuery);
-//   resetPage();
-//   updateFirstSearch(true);
-//   loadMoreBtn.hidden = true;
-//   gallery.innerHTML = '';
-
-//   getImages().then(function (data) {
-//     if (data.length === 0) {
-//       Notify.failure('Sorry, there are no images matching your search query. Please try again.');
-//       loadMoreBtn.style.display = 'none';
-//       return;
-//     }
-
-//     gallery.insertAdjacentHTML('beforeend', createMarkup(data));
-//     new SimpleLightbox('.gallery a', {
-//       captionDelay: 200,
-//       captionsData: 'alt',
-//     });
-//     loadMoreBtn.hidden = false;
-//     loadMoreBtn.style.display = 'block';
-//   });
-
-//   evt.target.searchQuery.value = '';
-// });
-
-// loadMoreBtn.addEventListener('click', function () {
-//   nextPage().then(function (data) {
-//     if (data.length === 0) {
-//       Report.info(
-//         "We're sorry",
-//         "but you've reached the end of search results.",
-//         'Okay'
-//       );
-//       loadMoreBtn.hidden = true;
-//       return;
-//     }
-
-//     gallery.insertAdjacentHTML('beforeend', createMarkup(data));
-//     new SimpleLightbox('.gallery a', {
-//       captionDelay: 200,
-//       captionsData: 'alt',
-//     });
-//   });
-// });
-
-
-
-
-
-//    /* smooth scrolling */
-//    function scrollPage() {
-//     const { height: cardHeight } = document.querySelector("gallery")
-//       .firstElementChild.getBoundingClientRect();
-  
-//     window.scrollBy({
-//       top: cardHeight * 2,
-//       behavior: 'smooth',
-//     });
-//   }
-
-
-//   scrollPage();
-
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -108,7 +15,7 @@ let imgsName = '';
 let currentPage = 1;
 let totalPage = 0;
 
-export {imgsName, currentPage };
+export { imgsName, currentPage };
 
 formEl.addEventListener('submit', onSubmit);
 loadMoreBtn.addEventListener('click', onClickLoadMoreBtn);
@@ -189,8 +96,6 @@ async function onClickLoadMoreBtn() {
   }
 }
 
-//Button smooth scroll up
-
 window.addEventListener('scroll', scrollFunction);
 
 function scrollFunction() {
@@ -200,6 +105,6 @@ function scrollFunction() {
     btnUpWrapper.style.display = 'none';
   }
 }
-    btnUp.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+btnUp.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
